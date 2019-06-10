@@ -3,13 +3,20 @@
 } */
 
 body{
-    background: url('../images/topography.png');
+    background: url('../images/steel_google.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     /* font-size: 18px;
     line-height: 34px;
     font-family: Arial, Helvetica, sans-serif;
     color: #777; */
 }
 
+.navbar-brand {
+    color: white !important;    
+    
+
+} 
 /* .container {
     width: 100%;
     max-width: 960px;

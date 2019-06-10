@@ -8,18 +8,8 @@
     <title>My Portfolio</title>
 </head>
  <body>
-    <!-- <header id="masthead">
-    <div class="container">  
-            <a href="index.html" id="logo">Trey Helmer</a>
-                <nav>
-                    <a href="index.html">About Me</a>
-                    <a href="portfolio.html">Portfolio</a>  
-                    <a href="contact.html">Contact</a>
-                </nav>
-    </div>
-    
-    </header>     -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light border-bottom">
+   
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border-bottom">
             <div class="container-fluid">
                     <a class="navbar-brand">Trey Helmer</a>
                 <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9">
@@ -41,43 +31,14 @@
             </div>
     </nav>
     
-            
-
-    
-
-<!-- <div id="main-container" class="container">
-    <section class="main-section">  
-        <h1>Contact</h1> 
-<div class="form-group">
-        <form id="contact-form"> 
-            <ul>
-                <li>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="John Smith" required="required">
-                </li>
-                <li>
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="example@gmail.com" required="required">
-                </li>
-                <li>
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required="required"></textarea>
-                </li>
-
-            </ul>
-            <input type="submit" name="submit"> 
-
-         </form>
-  
-
-    </section> -->
-    <div class="row d-flex p-5"> 
+<div class="container">
+    <div class="row d-flex p-3"> 
         <div class="col-sm-8">
                 <div class="card">
-                        <div class="card-body"> 
-                            <div class="card-title border-bottom"> <h2>Contact</h2></div> 
+                        <div class="card-body bg-light"> 
+                            <div class="card-title border-bottom"> <h3>Contact</h3></div> 
                             <form action="/action_page.php">
-                                    <div class="contact-form"> 
+                                    <div class="contact-form "> 
                                         <div class="form-group">
                                         <label class="control-label" for="fname">Name</label>
                                         <input type="text" class="form-control" id="fname" name="fname"></div>
@@ -88,7 +49,7 @@
                                                 <label class="control-label" for="comment">Message</label>
                                                 <textarea class="form-control" rows="5" id="comment"></textarea></div>
                                             <div class="form-group">        
-                                            <button type="submit" class="btn btn-primary float-left">Submit</button></div>
+                                            <button type="submit" class="btn btn-outline-warning">Submit</button></div>
                                     </div>
                             </form>
                         </div>
@@ -97,20 +58,21 @@
     
   
         <div class="col-sm-3">
-            <div class="d-flex p-2"> 
-            <!-- <div class="pb-2 mt-5 mb-4"> -->
+            <div class="d-flex"> 
                 <div class="card mt-5">
-                    <div class="card-header">Connect with Me</div>
+                    <div class="card-header bg-dark text-light">Connect with Me</div>
                     
-                    <div class="card-body"><img src="assets/images/icons/github.png" class="px-2" alt="Github"> <img src="assets/images/icons/linkedin-48.png" class="px-2" alt="LinkedIn"> <img src="assets/images/icons/slack-48.png" class="px-2" alt="Stack Overflow"></div>
+                    <div class="card-body"><img src="assets/images/icons/github.png" class="px-2" alt="Github"> 
+                        <img src="assets/images/icons/linkedin-48.png" class="px-2" alt="LinkedIn"> 
+                        <img src="assets/images/icons/slack-48.png" class="px-2" alt="Stack Overflow"></div>
                     </div>
               </div>
-            <!-- </div> -->
-        </div>   
-    
+        
+            </div>   
+    </div>
 </div>        
 
-    <div class="card-footer fixed-bottom footer-light bg-light text-center">
+    <div class="card-footer fixed-bottom bg-warning text-center border-top">
             &copy; 2019 Trey Helmer</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
