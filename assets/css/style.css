@@ -6,6 +6,9 @@ body{
     background: url('../images/steel_google.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
     /* font-size: 18px;
     line-height: 34px;
     font-family: Arial, Helvetica, sans-serif;
