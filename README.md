@@ -1,2 +1,2 @@
-# boostrap-portfolio
+# bootstrap-portfolio
 bootstrap-portfolio
