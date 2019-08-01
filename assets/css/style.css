@@ -27,9 +27,14 @@ html,body{
 
 .card-img-top {
 
-    height: 150px;
+    height: 175px;
     width: auto;
 }
+
+/* .card-body {
+font-size: 14px;
+
+} */
 
 
 .icon:hover{
