@@ -67,3 +67,7 @@ font-size: 14px;
     border-width:2px !important;
     }
 
+    .scroll {
+        max-height: 575px;
+        overflow-y: auto;
+    }
