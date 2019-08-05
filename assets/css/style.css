@@ -11,6 +11,24 @@ html,body{
    
 }
 
+i {
+
+    font-size: 36px;
+
+}
+.skills:hover{ 
+	animation: pulse 1s;
+	animation-timing-function: linear;   
+  }
+ 
+  
+  @keyframes pulse {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.1); }
+	100% { transform: scale(1); } */
+  } 
+
+
 
 
 .navbar-brand {
@@ -57,9 +75,9 @@ font-size: 14px;
 }
 
 .card.prj:hover {
-    -moz-box-shadow: 0 0 5px 5px #888;
-    -webkit-box-shadow: 0 0 5px 5px#888;
-    box-shadow: 0 0 5px 5px #888;
+    -moz-box-shadow: 0 0 5px 5px gold;
+    -webkit-box-shadow: 0 0 5px 5px gold;
+    box-shadow: 0 0 5px 5px gold;
     
     }
 
