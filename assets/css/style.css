@@ -78,8 +78,9 @@ font-size: 14px;
     -moz-box-shadow: 0 0 5px 5px gold;
     -webkit-box-shadow: 0 0 5px 5px gold;
     box-shadow: 0 0 5px 5px gold;
-    
+      transform: scale(1.025); 
     }
+    
 
 .prj {
     border-width:2px !important;
