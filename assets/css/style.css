@@ -77,9 +77,9 @@ font-size: 14px;
 }
 
 .card.prj:hover {
-    -moz-box-shadow: 0 0 5px 5px gold;
-    -webkit-box-shadow: 0 0 5px 5px gold;
-    box-shadow: 0 0 5px 5px gold;
+    -moz-box-shadow: 0 0 5px 5px rgb(20, 18, 5);
+    -webkit-box-shadow: 0 0 5px 5px rgb(19, 18, 16);
+    box-shadow: 0 0 5px 5px rgb(7, 7, 7);
       transform: scale(1.025); 
     }
     
