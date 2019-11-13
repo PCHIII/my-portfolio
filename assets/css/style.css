@@ -11,11 +11,19 @@ html,body {
    
 }
 
+.profile-sm {
+  height: 40px;
+  width: 40px;
+}
+
 i {
 
     font-size: 36px;
 
 }
+
+
+
 .skills:hover { 
 	animation: pulse 1s;
 	animation-timing-function: linear;   
