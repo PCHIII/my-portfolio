@@ -21,3 +21,7 @@
 // var icon = hashicon(String(hash), 50);
 
 // document.getElementById("icon").appendChild(icon);
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
