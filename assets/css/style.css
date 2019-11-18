@@ -59,6 +59,14 @@ i {
     width: auto;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
 /* .card-body {
 font-size: 14px;
 
