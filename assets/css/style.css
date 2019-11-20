@@ -160,3 +160,20 @@ font-size: 14px;
 	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: rgb(66, 66, 66);
 }
+
+.tooltip.show {
+  opacity:2;
+  
+ 
+} 
+
+.tooltip-inner {
+  text-align: left;
+  padding-left: 10px;
+  font-size: large;
+ 
+}
+
+/* .prt {
+  min-height: 600px;
+} */
