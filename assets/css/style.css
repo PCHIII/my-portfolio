@@ -162,7 +162,7 @@ font-size: 14px;
 }
 
 .tooltip.show {
-  opacity:2;
+  opacity:1 !important;
   
  
 } 
