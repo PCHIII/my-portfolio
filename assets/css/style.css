@@ -177,3 +177,17 @@ font-size: 14px;
 /* .prt {
   min-height: 600px;
 } */
+
+/* fontawesome color */
+
+.fa-desktop{
+  /* color: #ffc107; */
+  /* color:#dc3545; */
+  color:whitesmoke;
+
+}
+
+.fa-github{
+   /* color: #ffc107;  */
+   color:whitesmoke;
+}
