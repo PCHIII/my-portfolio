@@ -1,5 +1,7 @@
-# bootstrap-portfolio
-bootstrap-portfolio
+# My GaTech Portfolio
 
 
- https://pchiii.github.io/bootstrap-portfolio/
+Made with Bootstrap 4.3
+
+
+ https://pchiii.github.io/my-portfolio/
