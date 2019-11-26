@@ -1,4 +1,4 @@
-# My GaTech Portfolio
+# My GaTech Full-Stack MERN Portfolio
 
 
 Made with Bootstrap 4.3
