@@ -200,6 +200,10 @@ i {
 @media screen and (max-width: 568px){
     .container-footer {
         display:none;
+
+    }
+    .prj {
+      min-width: 150px;
     }
 
 } 
