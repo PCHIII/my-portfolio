@@ -1,5 +1,4 @@
-## My GaTech Full-Stack MERN Portfolio
-
+## My Portfolio
 
 
 ## Deployed on GitHub Pages <a href="https://pchiii.github.io/my-portfolio/" rel="nofollow"> here.</a>
