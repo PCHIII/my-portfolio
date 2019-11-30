@@ -26,4 +26,5 @@
 * Bootstrap 4.3
 * JQuery
 * CSS
-* Animate CSS
+* Font-Awesome
+* Devicon Icons
