@@ -20,7 +20,7 @@
 </head>
  <body>
    
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border-bottom fixed-top">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border-bottom fixed-top mb-5">
             <div class="container-fluid">
                     <div class="float-left pr-3 slide-in-left2"> <img src="assets/images/avataaars.png"  class="profile-sm" alt="responsive-image"></div> 
                     <a class="navbar-brand slide-in-left">Trey Helmer</a>
@@ -53,12 +53,19 @@
     <script type="text/javascript">
         var oktaSignIn = new OktaSignIn({
           baseUrl: "https://dev-970237.okta.com",
+          logo: 'assets/images/avataaars.png',
+          brandName: 'Trey Helmer',
           clientId: "0oa24xeu76kpUA5wY357",
+         
           authParams: {
             issuer: "https://dev-970237.okta.com/oauth2/default",
             responseType: ['token', 'id_token'],
             display: 'page'
+          },
+            colors: {
+            brand: '#495057',
           }
+
         });
   
         if (oktaSignIn.token.hasTokensInUrl()) {
