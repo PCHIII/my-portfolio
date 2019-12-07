@@ -41,8 +41,10 @@
                         <li class="nav-item"> 
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
-                       
 
+                        <li class="nav-item mt-2 ml-2">
+                        <a href="/logout" id="logout-button">Sign out</a>
+                      </li>
                     </ul>
                 </div>
             </div>
@@ -103,6 +105,21 @@
             );
           });
         }
+
+        document.getElementById('logout-button').addEventListener('click', (event) => {
+    event.preventDefault()
+
+    const signoutWindow = window.open(
+      'https://dev-970237.okta.com/login/signout',
+      'okta-signout',
+      'height=1,width=1',
+    )
+
+    setTimeout(() => {
+      signoutWindow.close()
+      window.location = document.getElementById('logout-button').href
+    }, 1000)
+  })
       </script>
     </body>
   </html>
