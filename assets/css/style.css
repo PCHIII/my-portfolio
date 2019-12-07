@@ -390,4 +390,7 @@ font-size: 14px;
 
 /* okta widget */
 
-        
+#messageBox{
+font-weight: bolder;
+
+}
