@@ -55,17 +55,33 @@
     <div id="okta-login-container"></div>
 
     <script type="text/javascript">
+
+
+
+
         var oktaSignIn = new OktaSignIn({
+
+          features: {
+          registration: true,                 // Enable self-service registration flow
+          router: true, 
+          },
+
+       
+
           baseUrl: "https://dev-970237.okta.com",
           logo: 'assets/images/icons/gt.png',
           brandName: 'Trey Helmer',
           clientId: "0oa24xeu76kpUA5wY357",
          
+
           authParams: {
             issuer: "https://dev-970237.okta.com/oauth2/default",
             responseType: ['token', 'id_token'],
-            display: 'page'
+            display: 'page',
+            scopes: ['openid', 'email', 'profile'],
+                      
           },
+
             colors: {
             brand: '#495057',
           }
