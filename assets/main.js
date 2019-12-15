@@ -104,6 +104,8 @@ var oktaSignIn = new OktaSignIn({
     });
   }
 
+  // got this sign out code from github https://github.com/okta/okta-oidc-js/issues/162 
+
   document.getElementById('logout-button').addEventListener('click', (event) => {
     event.preventDefault()
 
