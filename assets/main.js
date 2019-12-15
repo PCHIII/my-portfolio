@@ -61,6 +61,12 @@ var oktaSignIn = new OktaSignIn({
       brand: '#495057',
     }
 
+    // idps: [
+    //   {type: 'GOOGLE', id: '0oaaix1twko0jyKik0g4'},
+      // {type: 'FACEBOOK', id: '0oar25ZnMM5LrpY1O0g3'},
+      // {type: 'LINKEDIN', id: '0oaaix1twko0jyKik0g4'},
+     
+    // ]
   });
 
   if (oktaSignIn.token.hasTokensInUrl()) {
