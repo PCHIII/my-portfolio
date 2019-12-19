@@ -90,7 +90,7 @@ var oktaSignIn = new OktaSignIn({
     oktaSignIn.session.get(function (res) {
       // If we get here, the user is already signed in.
       if (res.status === 'ACTIVE') {
-        document.getElementById("messageBox").innerHTML = "Hello, " + res.login + "! You're 'still' logged in! :)";
+        document.getElementById("messageBox").innerHTML = "Hello, " + res.login + "! You are logged in! :)";
         return;
       }
       oktaSignIn.renderEl({
