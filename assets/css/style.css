@@ -397,7 +397,7 @@ font-weight: bolder;
 
 
 
-/* /blurred text/ */
+/* /blurred text view on hover/ */
 .blur-text {
   filter: blur(5px);
   transition: filter 0.3s ease;
