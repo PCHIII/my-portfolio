@@ -80,7 +80,7 @@ var oktaSignIn = new OktaSignIn({
         oktaSignIn.tokenManager.add('idToken', idToken);
 
         window.location.hash = '';
-        document.getElementById("messageBox").innerHTML = "Hello, " + idToken.claims.email + "! You just logged in! :)";
+        document.getElementById("messageBox").innerHTML = "Hello, " + idToken.claims.email + "! You are logged in! :)";
       },
       function error(err) {
         console.error(err);
