@@ -9,6 +9,14 @@ export const about = {
     "Solution engineering",
     "Integrations",
     "UX/UI",
+    "Identity Governance",
+    "Identity Governance & Administration (IGA)",
+    "Saviynt",
+    "Privileged Access Management (PAM)",
+    "Just-in-Time (JIT) access",
+    "Access controls",
+    "Role-Based Access Control (RBAC)",
+    "Attribute-Based Access Control (ABAC)",
     "HTML",
     "CSS",
     "JavaScript",
@@ -34,9 +42,6 @@ export const about = {
     "Static Site Generation (SSG)",
     "OAuth/OIDC",
     "Okta",
-    "Slack",
-    "Google",
-    "VS Code",
-    "Chrome"
+    "VS Code"
   ]
 };
