@@ -14,11 +14,25 @@ export const about = {
     "Solution engineering",
     "Integrations",
     "UX/UI",
+    "HTML",
+    "CSS",
     "JavaScript",
+    "Bootstrap",
+    "jQuery",
     "Node.js",
+    "Express",
     "React",
+    "Webpack",
     "SQL",
-    "MongoDB"
+    "MySQL",
+    "MongoDB",
+    "Sequelize",
+    "Git",
+    "GitHub",
+    "GitLab",
+    "Slack",
+    "Google",
+    "VS Code",
+    "Chrome"
   ]
 };
-

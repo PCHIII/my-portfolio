@@ -32,6 +32,16 @@ function setMessage(text: string) {
   if (messageBox) messageBox.textContent = text;
 }
 
+function errorHelp(baseUrl: string) {
+  const origin = window.location.origin;
+  return [
+    "If this fails on the live site, Okta usually needs:",
+    `- Redirect URI: ${origin}/login/`,
+    `- Trusted Origin (CORS + Redirect): ${origin}`,
+    `Okta org: ${baseUrl}`,
+  ].join("\n");
+}
+
 function getOktaConfig(container: HTMLElement) {
   const baseUrl = container.dataset.oktaBaseUrl;
   const issuer = container.dataset.oktaIssuer;
@@ -86,6 +96,12 @@ function wireLogout(oktaBaseUrl: string, widget: OktaSignInWidget) {
 async function init() {
   const container = document.getElementById("okta-login-container");
   if (!container) return;
+
+  window.addEventListener("unhandledrejection", (event) => {
+    const reason = (event as PromiseRejectionEvent).reason;
+    const msg = reason instanceof Error ? reason.message : String(reason);
+    setMessage(`Unexpected error: ${msg}`);
+  });
 
   const ok = await waitForOktaSignIn();
   if (!ok || !window.OktaSignIn) {
@@ -145,7 +161,7 @@ async function init() {
       },
       (err) => {
         console.error(err);
-        setMessage("Sign-in failed. See console for details.");
+        setMessage(`Sign-in failed. See console for details.\n\n${errorHelp(config.baseUrl)}`);
       }
     );
     return;
@@ -162,7 +178,9 @@ async function init() {
       () => {},
       (err) => {
         console.error(err);
-        setMessage("Unable to render Okta widget. See console for details.");
+        setMessage(
+          `Unable to render Okta widget. See console for details.\n\n${errorHelp(config.baseUrl)}`
+        );
       }
     );
   });
