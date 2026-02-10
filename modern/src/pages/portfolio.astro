@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "../data/projects";
+---
+
+<BaseLayout title="Trey Helmer · Portfolio">
+  <header class="flex flex-col gap-2">
+    <p class="text-sm font-medium tracking-wide text-white/60">Portfolio</p>
+    <h1 class="text-2xl font-semibold text-white/95 sm:text-3xl">Selected work</h1>
+    <p class="max-w-2xl text-white/70">
+      This list is being migrated from the legacy portfolio page.
+    </p>
+  </header>
+
+  <section class="mt-8 grid gap-4 sm:grid-cols-2">
+    {projects.map((project) => <ProjectCard project={project} />)}
+  </section>
+</BaseLayout>
+

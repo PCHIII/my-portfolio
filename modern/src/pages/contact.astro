@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icons from "../components/Icons.astro";
+---
+
+<BaseLayout title="Trey Helmer · Contact">
+  <header class="flex flex-col gap-2">
+    <p class="text-sm font-medium tracking-wide text-white/60">Contact</p>
+    <h1 class="text-2xl font-semibold text-white/95 sm:text-3xl">Get in touch</h1>
+    <p class="max-w-2xl text-white/70">
+      Prefer email/LinkedIn? Use the links below — or send a message with the form.
+    </p>
+  </header>
+
+  <section class="mt-8 grid gap-6 md:grid-cols-2">
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <p class="text-sm font-semibold text-white/85">Links</p>
+      <div class="mt-4 flex flex-col gap-3 text-sm">
+        <a class="inline-flex items-center gap-2 text-white/70 hover:text-white/95" href="https://github.com/PCHIII" target="_blank" rel="noreferrer">
+          <Icons name="github" class="h-5 w-5" /> GitHub
+        </a>
+        <a class="inline-flex items-center gap-2 text-white/70 hover:text-white/95" href="https://www.linkedin.com/in/trey-h-1b73a85a" target="_blank" rel="noreferrer">
+          <Icons name="linkedin" class="h-5 w-5" /> LinkedIn
+        </a>
+        <a class="inline-flex items-center gap-2 text-white/70 hover:text-white/95" href="mailto:treyhelmer@gmail.com">
+          <Icons name="mail" class="h-5 w-5" /> treyhelmer@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <form
+      class="rounded-2xl border border-white/10 bg-white/5 p-6"
+      target="_blank"
+      action="https://formsubmit.co/e43bce5edf5d10fd72d8be27c06df5b3"
+      method="POST"
+    >
+      <p class="text-sm font-semibold text-white/85">Message</p>
+      <div class="mt-4 grid gap-3">
+        <div class="grid gap-3 sm:grid-cols-2">
+          <input
+            class="w-full rounded-xl border border-white/10 bg-ink-900/60 px-3 py-2 text-sm text-white/90 placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-indigo-400/40"
+            type="text"
+            name="name"
+            placeholder="Full name"
+            required
+          />
+          <input
+            class="w-full rounded-xl border border-white/10 bg-ink-900/60 px-3 py-2 text-sm text-white/90 placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-indigo-400/40"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <textarea
+          class="min-h-[10rem] w-full rounded-xl border border-white/10 bg-ink-900/60 px-3 py-2 text-sm text-white/90 placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-indigo-400/40"
+          name="message"
+          placeholder="Your message"
+          required
+        ></textarea>
+        <button
+          class="inline-flex items-center justify-center rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-ink-950 hover:bg-white/90"
+          type="submit"
+        >
+          Send
+        </button>
+      </div>
+    </form>
+  </section>
+</BaseLayout>
+

@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import oktaLoginScriptUrl from "../scripts/okta-login.ts?url";
+
+const okta = {
+  baseUrl: "https://dev-970237.okta.com",
+  issuer: "https://dev-970237.okta.com/oauth2/default",
+  clientId: "0oa24xeu76kpUA5wY357",
+  logo: "/okta/gt.png",
+  brandName: "Trey Helmer",
+};
+---
+
+<BaseLayout title="Trey Helmer · Login">
+  <header class="flex flex-col gap-2">
+    <p class="text-sm font-medium tracking-wide text-white/60">Login</p>
+    <h1 class="text-2xl font-semibold text-white/95 sm:text-3xl">Sign in</h1>
+    <p class="max-w-2xl text-white/70">
+      This page renders the Okta Sign-In Widget in the browser (static site friendly).
+    </p>
+  </header>
+
+  <section class="mt-8 grid gap-6 md:grid-cols-[1fr_0.9fr]">
+    <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <div
+        id="messageBox"
+        class="rounded-xl border border-white/10 bg-ink-900/50 px-4 py-3 text-sm text-white/80"
+      >
+        Please sign in.
+      </div>
+
+      <div class="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-white/95 p-2">
+        <div
+          id="okta-login-container"
+          data-okta-base-url={okta.baseUrl}
+          data-okta-issuer={okta.issuer}
+          data-okta-client-id={okta.clientId}
+          data-okta-logo={okta.logo}
+          data-okta-brand-name={okta.brandName}
+        ></div>
+      </div>
+
+      <div class="mt-4 flex flex-wrap items-center gap-3">
+        <a
+          id="logout-button"
+          href="/"
+          class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white/80 hover:bg-white/10"
+        >
+          Sign out
+        </a>
+      </div>
+    </div>
+
+    <aside class="rounded-2xl border border-white/10 bg-white/5 p-6">
+      <p class="text-sm font-semibold text-white/85">Setup note</p>
+      <p class="mt-3 text-sm leading-relaxed text-white/65">
+        If you want this to work on <code class="rounded bg-white/10 px-1.5 py-0.5">localhost</code>, add
+        <code class="rounded bg-white/10 px-1.5 py-0.5">http://localhost:4321/login/</code> as an allowed redirect URI in Okta.
+      </p>
+    </aside>
+  </section>
+
+  <link
+    rel="stylesheet"
+    href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/3.0.0/css/okta-sign-in.min.css"
+  />
+  <script
+    src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.16.0/js/okta-sign-in.min.js"
+    defer
+  ></script>
+  <script type="module" src={oktaLoginScriptUrl}></script>
+</BaseLayout>
