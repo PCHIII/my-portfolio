@@ -119,7 +119,11 @@ async function init() {
       window.history.replaceState({}, document.title, "/secret/");
     } else {
       try {
-        await auth0Client.checkSession();
+        await auth0Client.checkSession({
+          authorizationParams: {
+            redirect_uri: `${window.location.origin}/login/`,
+          },
+        });
       } catch {
         showLoggedOutState();
         return;
