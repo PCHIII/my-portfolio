@@ -3,7 +3,7 @@ const links = [
   { href: "/", label: "About" },
   { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
-  { href: "/login", label: "Login" },
+  { href: "/login", label: "Login", authLink: true },
 ];
 ---
 
@@ -20,6 +20,7 @@ const links = [
       {links.map((l) => (
         <a
           href={l.href}
+          data-auth-link={l.authLink ? "true" : undefined}
           class="rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-white/95"
         >
           {l.label}
@@ -37,6 +38,7 @@ const links = [
             {links.map((l) => (
               <a
                 href={l.href}
+                data-auth-link={l.authLink ? "true" : undefined}
                 class="rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-white/95"
               >
                 {l.label}
@@ -48,3 +50,20 @@ const links = [
     </details>
   </nav>
 </header>
+
+<script>
+  const authStateKey = "th.authenticated";
+  const isAuthenticated = window.localStorage.getItem(authStateKey) === "true";
+  const authLinks = document.querySelectorAll('a[data-auth-link="true"]');
+
+  authLinks.forEach((link) => {
+    if (!(link instanceof HTMLAnchorElement)) return;
+    if (isAuthenticated) {
+      link.href = "/secret";
+      link.textContent = "Secret";
+      return;
+    }
+    link.href = "/login";
+    link.textContent = "Login";
+  });
+</script>

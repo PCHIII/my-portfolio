@@ -2,6 +2,7 @@ import { createAuth0Client, type Auth0Client, type User } from "@auth0/auth0-spa
 
 const DEFAULT_AUTH0_DOMAIN = "dev-857utmcrtxtcove4.us.auth0.com";
 const DEFAULT_AUTH0_CLIENT_ID = "giCqBzfSwhuj9pEXHcU34ncHRuOYWit6";
+const AUTH_STATE_KEY = "th.authenticated";
 
 const loadingState = document.getElementById("loading-state");
 const errorState = document.getElementById("error-state");
@@ -14,6 +15,16 @@ const loginButton = document.getElementById("login-button");
 const logoutButton = document.getElementById("logout-button");
 
 let auth0Client: Auth0Client | null = null;
+
+function setAuthState(isAuthenticated: boolean) {
+  window.localStorage.setItem(AUTH_STATE_KEY, isAuthenticated ? "true" : "false");
+  const authLinks = document.querySelectorAll('a[data-auth-link="true"]');
+  authLinks.forEach((link) => {
+    if (!(link instanceof HTMLAnchorElement)) return;
+    link.href = isAuthenticated ? "/secret" : "/login";
+    link.textContent = isAuthenticated ? "Secret" : "Login";
+  });
+}
 
 function setVisible(element: HTMLElement | null, visible: boolean) {
   if (!element) return;
@@ -101,9 +112,13 @@ async function updateUi() {
   setVisible(loggedInSection as HTMLElement, isAuthenticated);
 
   if (isAuthenticated) {
+    setAuthState(true);
     const user = await auth0Client.getUser();
     if (user) renderProfile(user);
+    return;
   }
+
+  setAuthState(false);
 }
 
 async function handleLogin() {
@@ -117,6 +132,7 @@ async function handleLogin() {
 
 async function handleLogout() {
   if (!auth0Client) return;
+  setAuthState(false);
   await auth0Client.logout({
     logoutParams: {
       returnTo: `${window.location.origin}/`,
