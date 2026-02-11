@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import auth0LoginScriptUrl from "../scripts/auth0-login.ts?url";
 ---
 
 <BaseLayout title="Trey Helmer · Login">
@@ -63,5 +62,7 @@ import auth0LoginScriptUrl from "../scripts/auth0-login.ts?url";
       </div>
     </div>
   </section>
-  <script type="module" src={auth0LoginScriptUrl}></script>
+  <script>
+    import "../scripts/auth0-login.ts";
+  </script>
 </BaseLayout>
