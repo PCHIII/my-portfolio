@@ -140,7 +140,12 @@ async function init() {
       window.location.search.includes("state=");
 
     if (hasAuthResult) {
-      await auth0Client.handleRedirectCallback();
+      const { appState } = await auth0Client.handleRedirectCallback();
+      const returnTo = typeof appState?.returnTo === "string" ? appState.returnTo : "/login/";
+      if (returnTo !== "/login/") {
+        window.location.replace(returnTo);
+        return;
+      }
       window.history.replaceState({}, document.title, "/login/");
     } else {
       try {

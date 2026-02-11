@@ -42,7 +42,7 @@ function getOriginSetupHelp() {
   const origin = window.location.origin;
   return [
     "Auth0 application settings required:",
-    `Allowed Callback URLs: ${origin}/secret/`,
+    `Allowed Callback URLs: ${origin}/login/`,
     `Allowed Logout URLs: ${origin}/`,
     `Allowed Web Origins: ${origin}`,
   ].join("\n");
@@ -81,8 +81,11 @@ function showLoggedOutState() {
 async function handleLogin() {
   if (!auth0Client) return;
   await auth0Client.loginWithRedirect({
+    appState: {
+      returnTo: "/secret/",
+    },
     authorizationParams: {
-      redirect_uri: `${window.location.origin}/secret/`,
+      redirect_uri: `${window.location.origin}/login/`,
     },
   });
 }
@@ -104,7 +107,7 @@ async function init() {
       domain,
       clientId,
       authorizationParams: {
-        redirect_uri: `${window.location.origin}/secret/`,
+        redirect_uri: `${window.location.origin}/login/`,
       },
     });
 
