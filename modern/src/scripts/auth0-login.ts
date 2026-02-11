@@ -1,5 +1,8 @@
 import { createAuth0Client, type Auth0Client, type User } from "@auth0/auth0-spa-js";
 
+const DEFAULT_AUTH0_DOMAIN = "dev-857utmcrtxtcove4.us.auth0.com";
+const DEFAULT_AUTH0_CLIENT_ID = "giCqBzfSwhuj9pEXHcU34ncHRuOYWit6";
+
 const loadingState = document.getElementById("loading-state");
 const errorState = document.getElementById("error-state");
 const errorDetails = document.getElementById("error-details");
@@ -18,8 +21,9 @@ function setVisible(element: HTMLElement | null, visible: boolean) {
 }
 
 function getAuth0Config() {
-  const domain = import.meta.env.VITE_AUTH0_DOMAIN as string | undefined;
-  const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID as string | undefined;
+  const env = import.meta.env as Record<string, string | undefined>;
+  const domain = env.VITE_AUTH0_DOMAIN ?? DEFAULT_AUTH0_DOMAIN;
+  const clientId = env.VITE_AUTH0_CLIENT_ID ?? DEFAULT_AUTH0_CLIENT_ID;
 
   if (!domain || !clientId) {
     throw new Error(
