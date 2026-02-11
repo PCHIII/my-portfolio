@@ -1,6 +1,6 @@
 export const about = {
   headline:
-    "Partner-focused operator blending technical fluency with go-to-market precision.",
+    "Solutions Engineer blending technical fluency with go-to-market precision.",
   paragraphs: [
     "With a B.S. in Management from Georgia Tech, Trey works at the intersection of technology, sales strategy, and partner enablement—currently in eCommerce, where he manages vendor relationships and integrations that drive scalable, high-impact outcomes. His background spans enterprise identity platforms and complex integration work (from Identity Governance and Privileged Access Management to commerce architecture), translating technical depth into clear business value for commercial and mid-market teams. With hands-on UX/UI front-end experience and MERN full-stack training, he bridges technical and business stakeholders, supports product rollouts and pre-sales efforts, and helps teams move from concept to execution faster."
   ],
