@@ -2,7 +2,10 @@ export const about = {
   headline:
     "Solutions Engineer blending technical fluency with go-to-market precision.",
   paragraphs: [
-    "With a B.S. in Management from Georgia Tech, Trey works at the intersection of technology, sales strategy, and partner enablement—currently in eCommerce, where he manages vendor relationships and integrations that drive scalable, high-impact outcomes. His background spans enterprise identity platforms and complex integration work (from Identity Governance and Privileged Access Management to commerce architecture), translating technical depth into clear business value for commercial and mid-market teams. With hands-on UX/UI front-end experience and MERN full-stack training, he bridges technical and business stakeholders, supports product rollouts and pre-sales efforts, and helps teams move from concept to execution faster."
+    "Trey holds a B.S. in Management from Georgia Tech and works at the intersection of technology, sales strategy, and partner enablement. He currently operates in eCommerce, leading vendor relationships and integrations that deliver scalable, high-impact results.",
+    "His background spans enterprise identity platforms and complex integration environments, including Identity Governance, Privileged Access Management, and commerce architecture. He translates technical depth into clear business value, helping organizations align systems, strategy, and revenue goals.",
+    "He turns complex technology into clear business outcomes for commercial, mid-market, and enterprise teams. He helps leaders connect their systems and tools to bigger-picture goals like growth, efficiency, and stronger partnerships. By keeping strategy and execution aligned, he ensures technology decisions support revenue, simplify operations, and position the organization to scale with confidence.",
+    "With hands-on UX and UI front-end experience and MERN full-stack training, Trey bridges technical and business stakeholders with credibility on both sides. He supports product rollouts, drives pre-sales initiatives, and helps teams move from concept to execution faster."
   ],
   skills: [
     "Identity & Access Management (IAM)",
