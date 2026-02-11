@@ -9,8 +9,23 @@ It is **side-by-side** with the current static HTML site, so nothing at the repo
 ```bash
 cd modern
 npm install
+cp .env.example .env.local
 npm run dev
 ```
+
+## Auth0 setup
+
+Set `modern/.env.local`:
+
+```bash
+VITE_AUTH0_DOMAIN=your-tenant.auth0.com
+VITE_AUTH0_CLIENT_ID=your-client-id
+```
+
+In Auth0 application settings (Single Page Application), include:
+- Allowed Callback URLs: `https://treyhelmer.com/login/`, `http://localhost:4321/login/`
+- Allowed Logout URLs: `https://treyhelmer.com/`, `http://localhost:4321/`
+- Allowed Web Origins: `https://treyhelmer.com`, `http://localhost:4321`
 
 ## Build
 
@@ -31,4 +46,4 @@ Cutover checklist (GitHub UI):
 
 Notes:
 - Custom domain support is handled via `public/CNAME` so the deployed site includes the CNAME file.
-- Okta redirect URIs must include the deployed URL, e.g. `https://treyhelmer.com/login/`.
+- Auth0 callback/logout/web-origin URLs must include the deployed and local URLs above.

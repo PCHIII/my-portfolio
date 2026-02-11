@@ -1,65 +1,67 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import oktaLoginScriptUrl from "../scripts/okta-login.ts?url";
-
-const okta = {
-  baseUrl: "https://dev-970237.okta.com",
-  issuer: "https://dev-970237.okta.com/oauth2/default",
-  clientId: "0oa24xeu76kpUA5wY357",
-  logo: "/okta/gt.png",
-  brandName: "Trey Helmer",
-};
+import auth0LoginScriptUrl from "../scripts/auth0-login.ts?url";
 ---
 
 <BaseLayout title="Trey Helmer · Login">
   <header class="flex flex-col gap-2">
     <p class="text-sm font-medium tracking-wide text-white/60">Login</p>
-    <h1 class="text-2xl font-semibold text-white/95 sm:text-3xl">Sign in</h1>
+    <h1 class="text-2xl font-semibold text-white/95 sm:text-3xl">Sign in with Auth0</h1>
     <p class="max-w-2xl text-white/70">
-      This page renders the Okta Sign-In Widget in the browser (static site friendly).
+      This page uses the Auth0 SPA SDK for browser-based authentication.
     </p>
   </header>
 
-  <section class="mt-8 grid gap-6 md:grid-cols-[1fr_0.9fr]">
-    <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+  <section class="mt-8">
+    <div class="mx-auto max-w-2xl rounded-2xl border border-white/10 bg-white/5 p-6">
+      <div id="loading-state" class="rounded-xl border border-white/10 bg-ink-900/50 px-4 py-3 text-sm text-white/80">
+        Checking authentication state...
+      </div>
+
       <div
-        id="messageBox"
-        class="rounded-xl border border-white/10 bg-ink-900/50 px-4 py-3 text-sm text-white/80"
+        id="error-state"
+        class="mt-4 hidden rounded-xl border border-red-400/30 bg-red-950/40 px-4 py-3 text-sm text-red-100"
       >
-        Please sign in.
+        <p class="font-semibold">Auth0 setup issue</p>
+        <p id="error-details" class="mt-1 whitespace-pre-wrap text-red-100/90"></p>
       </div>
 
-      <div class="mt-4 overflow-hidden rounded-2xl border border-white/10 bg-white/95 p-2">
-        <div
-          id="okta-login-container"
-          data-okta-base-url={okta.baseUrl}
-          data-okta-issuer={okta.issuer}
-          data-okta-client-id={okta.clientId}
-          data-okta-logo={okta.logo}
-          data-okta-brand-name={okta.brandName}
-        ></div>
-      </div>
+      <div id="auth-app" class="mt-4 hidden rounded-2xl border border-white/10 bg-ink-900/40 p-6">
+        <img
+          src="https://cdn.auth0.com/quantum-assets/dist/latest/logos/auth0/auth0-lockup-en-ondark.png"
+          alt="Auth0"
+          class="mx-auto mb-6 h-10 w-auto"
+          loading="lazy"
+        />
 
-      <div class="mt-4 flex flex-wrap items-center gap-3">
-        <a
-          id="logout-button"
-          href="/"
-          class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white/80 hover:bg-white/10"
-        >
-          Sign out
-        </a>
+        <div id="logged-out-section" class="space-y-4">
+          <p class="text-center text-sm text-white/70">Authenticate with your Auth0 tenant.</p>
+          <div class="flex justify-center">
+            <button
+              id="login-button"
+              class="rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-ink-950 hover:bg-white/90"
+              type="button"
+            >
+              Log in
+            </button>
+          </div>
+        </div>
+
+        <div id="logged-in-section" class="hidden space-y-4">
+          <p class="text-center text-sm font-medium text-emerald-300">Authenticated</p>
+          <div id="profile-container" class="rounded-xl border border-white/10 bg-white/5 p-4"></div>
+          <div class="flex justify-center">
+            <button
+              id="logout-button"
+              class="rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-white/80 hover:bg-white/10"
+              type="button"
+            >
+              Log out
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-
   </section>
-
-  <link
-    rel="stylesheet"
-    href="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.16.0/css/okta-sign-in.min.css"
-  />
-  <script
-    src="https://ok1static.oktacdn.com/assets/js/sdk/okta-signin-widget/2.16.0/js/okta-sign-in.min.js"
-    defer
-  ></script>
-  <script type="module" src={oktaLoginScriptUrl}></script>
+  <script type="module" src={auth0LoginScriptUrl}></script>
 </BaseLayout>

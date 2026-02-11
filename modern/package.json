@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.0",
+    "@auth0/auth0-spa-js": "^2.15.0",
     "astro": "^5.0.0"
   },
   "devDependencies": {
@@ -18,4 +19,3 @@
     "typescript": "^5.0.0"
   }
 }
-
