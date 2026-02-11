@@ -12,6 +12,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "My Portfolio",
+    description: "Modern Astro + Tailwind portfolio deployed via GitHub Pages.",
+    href: "https://treyhelmer.com/",
+    repo: "https://github.com/PCHIII/my-portfolio",
+    image: { src: "/projects/my-portfolio.svg", alt: "My Portfolio homepage" },
+    tags: ["Astro", "Tailwind CSS", "GitHub Actions", "GitHub Pages"],
+  },
+  {
+    title: "Atlantus Partners",
+    description: "Marketing site for Atlantus Partners.",
+    href: "https://www.atlantuspartners.com/",
+    repo: "https://github.com/PCHIII/Atlantus",
+    image: { src: "/projects/atlantus.svg", alt: "Atlantus Partners homepage" },
+    tags: ["Website", "Brand", "Frontend"],
+  },
+  {
     title: "Psychic Game",
     description: "The first App I ever made.",
     href: "https://pchiii.github.io/psychic-game/",

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Atlantus Partners preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05070a"/>
+      <stop offset="1" stop-color="#09141f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="46%" r="55%">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9d6ea" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#2c5875" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <g opacity="0.9">
+    <circle cx="800" cy="380" r="190" fill="none" stroke="url(#steel)" stroke-width="18" opacity="0.55"/>
+    <path d="M800 280 L720 470 L800 420 L880 470 Z" fill="url(#steel)" opacity="0.85"/>
+    <path d="M795 420 C910 440 930 490 940 540 C880 505 840 500 760 505 C695 508 645 525 600 545 C615 495 660 445 795 420 Z" fill="url(#steel)" opacity="0.55"/>
+  </g>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" text-anchor="middle">
+    <text x="800" y="650" fill="#ffffff" fill-opacity="0.92" font-size="70" font-weight="700" letter-spacing="6">
+      ATLANTUS
+    </text>
+    <text x="800" y="715" fill="#ffffff" fill-opacity="0.62" font-size="34" font-weight="600" letter-spacing="10">
+      PARTNERS
+    </text>
+    <text x="800" y="790" fill="#ffffff" fill-opacity="0.55" font-size="20">
+      Replace this placeholder with your screenshot for the project card image.
+    </text>
+  </g>
+</svg>
+
