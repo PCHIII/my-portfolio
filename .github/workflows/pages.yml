@@ -35,8 +35,19 @@ jobs:
         working-directory: modern
         run: npm ci
 
+      - name: Validate Auth0 build secrets
+        run: |
+          test -n "${VITE_AUTH0_DOMAIN}" || (echo "Missing VITE_AUTH0_DOMAIN secret" && exit 1)
+          test -n "${VITE_AUTH0_CLIENT_ID}" || (echo "Missing VITE_AUTH0_CLIENT_ID secret" && exit 1)
+        env:
+          VITE_AUTH0_DOMAIN: ${{ secrets.VITE_AUTH0_DOMAIN }}
+          VITE_AUTH0_CLIENT_ID: ${{ secrets.VITE_AUTH0_CLIENT_ID }}
+
       - name: Build
         working-directory: modern
+        env:
+          VITE_AUTH0_DOMAIN: ${{ secrets.VITE_AUTH0_DOMAIN }}
+          VITE_AUTH0_CLIENT_ID: ${{ secrets.VITE_AUTH0_CLIENT_ID }}
         run: npm run build
 
       - name: Upload artifact
