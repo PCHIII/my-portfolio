@@ -25,7 +25,7 @@ export const projects: Project[] = [
     href: "https://www.atlantuspartners.com/",
     repo: "https://github.com/PCHIII/Atlantus",
     image: { src: "/projects/atlantus.svg", alt: "Atlantus Partners homepage" },
-    tags: ["Website", "Brand", "Frontend"],
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap 5", "Font Awesome", "Google Fonts"],
   },
   {
     title: "Psychic Game",
