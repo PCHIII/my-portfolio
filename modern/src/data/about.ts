@@ -7,6 +7,14 @@ export const about = {
     "He turns complex technology into clear business outcomes for commercial, mid-market, and enterprise teams. He helps leaders connect their systems and tools to bigger-picture goals like growth, efficiency, and stronger partnerships. By keeping strategy and execution aligned, he ensures technology decisions support revenue, simplify operations, and position the organization to scale with confidence.",
     "With hands-on UX and UI front-end experience and MERN full-stack training, Trey bridges technical and business stakeholders with credibility on both sides. He supports product rollouts, drives pre-sales initiatives, and helps teams move from concept to execution faster."
   ],
+  certificates: [
+    "Saviynt Certified IGA Professional",
+    "MERN Full-Stack Web Development",
+    "Prompt Design in Vertex AI",
+    "Responsible AI: Applying AI Principles with Google Cloud",
+    "Introduction to Large Language Models",
+    "Introduction to Generative AI",
+  ],
   skills: [
     "Identity & Access Management (IAM)",
     "Identity Governance",
