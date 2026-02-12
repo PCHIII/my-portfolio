@@ -10,8 +10,9 @@ const links = [
 <header class="sticky top-0 z-50 border-b border-white/10 bg-ink-950/70 backdrop-blur">
   <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
     <a href="/" class="flex items-center gap-3">
-      <span class="grid h-9 w-9 place-items-center rounded-xl bg-white/10 ring-1 ring-white/10">
-        <span class="text-sm font-semibold tracking-wide">TH</span>
+      <span class="th-badge grid h-9 w-9 place-items-center overflow-hidden rounded-xl bg-white/10 ring-1 ring-white/10">
+        <span class="th-badge__shine" aria-hidden="true"></span>
+        <span class="relative z-10 text-sm font-semibold tracking-wide">TH</span>
       </span>
       <span class="text-sm font-semibold tracking-wide text-white/90">Trey Helmer</span>
     </a>
@@ -67,3 +68,62 @@ const links = [
     link.textContent = "Login";
   });
 </script>
+
+<style>
+  .th-badge {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .th-badge::after {
+    content: "";
+    position: absolute;
+    inset: -30%;
+    z-index: 0;
+    background:
+      radial-gradient(circle at 28% 22%, rgba(129, 140, 248, 0.24), transparent 58%),
+      radial-gradient(circle at 72% 78%, rgba(34, 211, 238, 0.16), transparent 60%);
+    animation: th-wave 8s ease-in-out infinite;
+  }
+
+  .th-badge__shine {
+    position: absolute;
+    inset: -45%;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(110deg, transparent 34%, rgba(255, 255, 255, 0.32) 50%, transparent 66%);
+    transform: translateX(-145%) rotate(9deg);
+    animation: th-shimmer 6s ease-in-out infinite;
+    mix-blend-mode: screen;
+  }
+
+  @keyframes th-wave {
+    0%, 100% {
+      transform: translate3d(-4%, 1%, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(4%, -3%, 0) scale(1.08);
+    }
+  }
+
+  @keyframes th-shimmer {
+    0%, 58%, 100% {
+      transform: translateX(-145%) rotate(9deg);
+      opacity: 0;
+    }
+    12%, 30% {
+      opacity: 0.65;
+    }
+    40% {
+      transform: translateX(145%) rotate(9deg);
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .th-badge::after,
+    .th-badge__shine {
+      animation: none;
+    }
+  }
+</style>
