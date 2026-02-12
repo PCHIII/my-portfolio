@@ -54,7 +54,7 @@ const hasLegacyHerokuLink = project.href?.includes("herokuapp.com") ?? false;
       </span>
     ) : null}
 
-    {project.repo ? (
+    {project.repo && !project.repoDisabled ? (
       <a
         href={project.repo}
         class="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white/85 hover:bg-white/10"
@@ -64,6 +64,16 @@ const hasLegacyHerokuLink = project.href?.includes("herokuapp.com") ?? false;
         <Icons name="github" class="h-4 w-4" />
         <span>Code</span>
       </a>
+    ) : null}
+    {project.repo && project.repoDisabled ? (
+      <span
+        class="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-sm text-white/45"
+        aria-disabled="true"
+        title="Repository link disabled"
+      >
+        <Icons name="github" class="h-4 w-4" />
+        <span>Code (disabled)</span>
+      </span>
     ) : null}
   </div>
 </article>

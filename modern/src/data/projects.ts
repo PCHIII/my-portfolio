@@ -3,6 +3,7 @@ export type Project = {
   description: string;
   href?: string;
   repo?: string;
+  repoDisabled?: boolean;
   image?: {
     src: string;
     alt: string;
@@ -16,6 +17,7 @@ export const projects: Project[] = [
     description: "Modern Astro + Tailwind portfolio deployed via GitHub Pages.",
     href: "https://treyhelmer.com/",
     repo: "https://github.com/PCHIII/my-portfolio",
+    repoDisabled: true,
     image: { src: "/projects/my-portfolio.svg", alt: "My Portfolio homepage" },
     tags: ["Astro", "Tailwind CSS", "GitHub Actions", "GitHub Pages"],
   },
@@ -24,6 +26,7 @@ export const projects: Project[] = [
     description: "Marketing site for Atlantus Partners.",
     href: "https://www.atlantuspartners.com/",
     repo: "https://github.com/PCHIII/Atlantus",
+    repoDisabled: true,
     image: { src: "/projects/atlantus.svg", alt: "Atlantus Partners homepage" },
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap 5", "Font Awesome"],
   },
