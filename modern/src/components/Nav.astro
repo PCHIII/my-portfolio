@@ -73,6 +73,10 @@ const links = [
   .th-badge {
     position: relative;
     isolation: isolate;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    transform: translateZ(0);
   }
 
   .th-badge::after {
@@ -84,6 +88,7 @@ const links = [
       radial-gradient(circle at 28% 22%, rgba(129, 140, 248, 0.34), transparent 50%),
       radial-gradient(circle at 72% 78%, rgba(34, 211, 238, 0.24), transparent 52%);
     animation: th-wave 8s ease-in-out infinite;
+    border-radius: inherit;
   }
 
   .th-badge__shine {
@@ -102,6 +107,7 @@ const links = [
     transform: translateX(-145%) rotate(9deg);
     animation: th-shimmer 6s ease-in-out infinite;
     mix-blend-mode: screen;
+    border-radius: inherit;
   }
 
   @keyframes th-wave {
