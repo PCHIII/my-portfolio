@@ -17,7 +17,7 @@ const links = [
       <span class="text-sm font-semibold tracking-wide text-white/90">Trey Helmer</span>
     </a>
 
-    <div class="hidden items-center gap-1 sm:flex">
+    <div class="desktop-links items-center gap-1">
       {links.map((l) => (
         <a
           href={l.href}
@@ -29,7 +29,7 @@ const links = [
       ))}
     </div>
 
-    <details class="group sm:hidden">
+    <details class="mobile-menu group">
       <summary class="list-none rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white/85 hover:bg-white/10">
         Menu
       </summary>
@@ -70,13 +70,31 @@ const links = [
 </script>
 
 <style>
+  .desktop-links {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  @media (min-width: 640px) {
+    .desktop-links {
+      display: flex;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+  }
+
   .th-badge {
     position: relative;
     isolation: isolate;
     overflow: hidden;
     border-radius: 0.75rem;
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
-    transform: translateZ(0);
+    clip-path: inset(0 round 0.75rem);
+    contain: paint;
   }
 
   .th-badge::after {
@@ -106,7 +124,7 @@ const links = [
     );
     transform: translateX(-145%) rotate(9deg);
     animation: th-shimmer 6s ease-in-out infinite;
-    mix-blend-mode: screen;
+    mix-blend-mode: normal;
     border-radius: inherit;
   }
 
