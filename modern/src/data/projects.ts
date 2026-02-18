@@ -153,7 +153,7 @@ export const projects: Project[] = [
     tags: ["React", "Socket.io", "MongoDB"],
   },
   {
-    title: "Certificate",
+    title: "MERN Stack Certificate",
     description: "WooHoo!!!!!!!",
     image: { src: "/projects/cert.jpg", alt: "Certificate" },
     tags: ["Milestone"],
