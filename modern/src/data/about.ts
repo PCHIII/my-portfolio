@@ -3,7 +3,7 @@ export const about = {
     "Solutions Engineer blending technical fluency with go-to-market precision.",
   paragraphs: [
     "Trey holds a B.S. in Management from Georgia Tech and works at the intersection of technology, sales strategy, and partner enablement. He currently operates in eCommerce, leading vendor relationships and integrations that deliver scalable, high-impact results.",
-    "His background spans enterprise identity platforms and complex integration environments, including Identity Governance, Privileged Access Management, and commerce architecture. He translates technical depth into clear business value, helping organizations align systems, strategy, and revenue goals.",
+    "His background spans enterprise identity platforms and complex integration environments, including Identity Governance, Privileged Access Management, Non-Human Identity (NHI) security, and commerce architecture. He translates technical depth into clear business value, helping organizations align systems, strategy, and revenue goals.",
     "He turns complex technology into clear business outcomes for commercial, mid-market, and enterprise teams. He helps leaders connect their systems and tools to bigger-picture goals like growth, efficiency, and stronger partnerships. By keeping strategy and execution aligned, he ensures technology decisions support revenue, simplify operations, and position the organization to scale with confidence.",
     "With hands-on UX and UI front-end experience and MERN full-stack training, Trey bridges technical and business stakeholders with credibility on both sides. He supports product rollouts, drives pre-sales initiatives, and helps teams move from concept to execution faster."
   ],
@@ -20,6 +20,7 @@ export const about = {
     "Identity Governance",
     "Identity Governance & Administration (IGA)",
     "Customer Identity & Access Management (CIAM)",
+    "Non-Human Identity (NHI)",
     "Saviynt",
     "Privileged Access Management (PAM)",
     "Just-in-Time (JIT) access",
