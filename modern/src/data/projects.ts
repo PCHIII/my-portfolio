@@ -14,12 +14,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "My Portfolio",
-    description: "Modern Astro + Tailwind portfolio deployed via GitHub Pages, built with Codex.",
+    description: "Modern Astro + Tailwind portfolio deployed via GitHub Pages",
     href: "https://treyhelmer.com/",
     repo: "https://github.com/PCHIII/my-portfolio",
     repoDisabled: true,
     image: { src: "/projects/my-portfolio.svg", alt: "My Portfolio homepage" },
-    tags: ["Astro", "Tailwind CSS", "GitHub Actions", "GitHub Pages", "Codex CLI", "GPT-5.2"],
+    tags: ["Astro", "Tailwind CSS", "GitHub Actions", "Codex CLI"],
   },
   {
     title: "Atlantus Partners",
