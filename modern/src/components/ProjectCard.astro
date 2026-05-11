@@ -51,7 +51,7 @@ const hasDisabledLiveLink = project.hrefDisabled ?? false;
         aria-disabled="true"
         title={project.hrefDisabledReason ?? "Live link disabled"}
       >
-        <span>Live</span>
+        <span>Live (offline)</span>
       </span>
     ) : null}
     {project.href && hasLegacyHerokuLink ? (
