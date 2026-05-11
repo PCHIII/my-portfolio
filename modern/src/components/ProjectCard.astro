@@ -4,6 +4,7 @@ import type { Project } from "../data/projects";
 
 const { project } = Astro.props as { project: Project };
 const hasLegacyHerokuLink = project.href?.includes("herokuapp.com") ?? false;
+const hasDisabledLiveLink = project.hrefDisabled ?? false;
 ---
 
 <article class="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
@@ -34,7 +35,7 @@ const hasLegacyHerokuLink = project.href?.includes("herokuapp.com") ?? false;
   </div>
 
   <div class="mt-5 flex items-center gap-2">
-    {project.href && !hasLegacyHerokuLink ? (
+    {project.href && !hasLegacyHerokuLink && !hasDisabledLiveLink ? (
       <a
         href={project.href}
         class="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-3 py-2 text-sm text-white/85 hover:bg-white/10"
@@ -43,6 +44,15 @@ const hasLegacyHerokuLink = project.href?.includes("herokuapp.com") ?? false;
       >
         <span>Live</span>
       </a>
+    ) : null}
+    {project.href && hasDisabledLiveLink ? (
+      <span
+        class="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-sm text-white/45"
+        aria-disabled="true"
+        title={project.hrefDisabledReason ?? "Live link disabled"}
+      >
+        <span>Live</span>
+      </span>
     ) : null}
     {project.href && hasLegacyHerokuLink ? (
       <span

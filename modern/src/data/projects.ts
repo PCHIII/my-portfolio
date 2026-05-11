@@ -2,6 +2,8 @@ export type Project = {
   title: string;
   description: string;
   href?: string;
+  hrefDisabled?: boolean;
+  hrefDisabledReason?: string;
   repo?: string;
   repoDisabled?: boolean;
   image?: {
@@ -140,6 +142,8 @@ export const projects: Project[] = [
     title: "Clicky Game",
     description: "Click Event Game built with React with Audio.",
     href: "https://pchiii.github.io/deployedclicky/",
+    hrefDisabled: true,
+    hrefDisabledReason: "Live link disabled",
     repo: "https://github.com/PCHIII/deployedclicky",
     image: { src: "/projects/Cowboys.JPG", alt: "Clicky Game screenshot" },
     tags: ["React", "GitHub Pages"],
