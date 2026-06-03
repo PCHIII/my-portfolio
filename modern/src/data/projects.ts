@@ -30,7 +30,7 @@ export const projects: Project[] = [
     repo: "https://github.com/PCHIII/Atlantus",
     repoDisabled: true,
     image: { src: "/projects/atlantus.svg", alt: "Atlantus Partners homepage" },
-    tags: ["Astro", "CSS", "JavaScript", "GitHub Actions", "GitHub Pages"],
+    tags: ["Astro", "CSS", "JavaScript", "GitHub Actions", "GitHub Pages", "Codex"],
   },
   {
     title: "Psychic Game",
