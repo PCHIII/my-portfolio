@@ -15,6 +15,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "SE Proper",
+    description: "A solution engineering library demo for sharing reusable use cases and contributions.",
+    href: "https://pchiii.github.io/SE-Proper/",
+    repo: "https://github.com/PCHIII/SE-Proper",
+    image: { src: "/projects/se-proper.svg", alt: "SE Proper use case library" },
+    tags: ["React", "TypeScript", "Vite", "GitHub Pages"],
+  },
+  {
     title: "My Portfolio",
     description: "Modern Astro + Tailwind portfolio deployed via GitHub Pages",
     href: "https://treyhelmer.com/",
