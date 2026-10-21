@@ -16,7 +16,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     title: "SE Proper",
-    description: "Helps sales engineers avoid reinventing the same customer solutions by making proven use cases, implementation notes, and peer contributions easy to find and reuse.",
+    description: "SE Proper explores how Solutions Engineers can avoid rebuilding work that’s scattered across personal docs and projects. The demo shows a shared library for reusable solutions and contributions, plus a prototype for translating technical work into customer-facing business-value stories.",
     href: "https://pchiii.github.io/SE-Proper/",
     repo: "https://github.com/PCHIII/SE-Proper",
     image: { src: "/projects/se-proper.svg", alt: "SE Proper use case library" },
